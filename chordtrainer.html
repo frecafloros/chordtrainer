@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>chordtrainer</title>
+	<link rel="stylesheet" type="text/css" href="chordtrainer.css">
+</head>
+<body>
+	<h1>絶対和音感</h1>
+	<div class="container">
+		<div class="obj-left">
+			<div class="config">
+				<dl>
+					<dt><label><input type="checkbox" id="checkAll">全選択</label></dt>
+				</dl>
+				<dl>
+					<dt><label><input type="checkbox" id="checkTriad">三和音：</label></dt>
+					<dd>
+						<label><input type="checkbox" name="chordval" value=0 checked>(M)</label>
+						<label><input type="checkbox" name="chordval" value=1>m</label>
+						<label><input type="checkbox" name="chordval" value=2>dim</label>
+						<label><input type="checkbox" name="chordval" value=3>aug</label>
+						<label><input type="checkbox" name="chordval" value=4>sus4</label>
+						<label><input type="checkbox" name="chordval" value=5>sus2</label>
+					</dd>
+				</dl>
+				<dl>
+					<dt><label><input type="checkbox" id="checkTetrad">四和音：</label></dt>
+					<dd>
+						<label><input type="checkbox" name="chordval" value=6>7</label>
+						<label><input type="checkbox" name="chordval" value=7>m7</label>
+						<label><input type="checkbox" name="chordval" value=8>M7</label>
+						<label><input type="checkbox" name="chordval" value=9>mM7</label>
+						<label><input type="checkbox" name="chordval" value=10>m7b5</label>
+						<label><input type="checkbox" name="chordval" value=11>dim7</label>
+						<label><input type="checkbox" name="chordval" value=12>aug7</label>
+						<label><input type="checkbox" name="chordval" value=13>augM7</label>
+						<label><input type="checkbox" name="chordval" value=14>6</label>
+						<label><input type="checkbox" name="chordval" value=15>m6</label>
+						<label><input type="checkbox" name="chordval" value=16>add9</label>
+						<label><input type="checkbox" name="chordval" value=17>blk</label>
+					</dd>
+				</dl>
+				<dl>
+					<dt><label><input type="checkbox" id="checkPentad">五和音：</label></dt>
+					<dd>
+						<label><input type="checkbox" name="chordval" value=18>9</label>
+						<label><input type="checkbox" name="chordval" value=19>m9</label>
+						<label><input type="checkbox" name="chordval" value=20>7(b9)</label>
+						<label><input type="checkbox" name="chordval" value=21>m7(b9)</label>
+						<label><input type="checkbox" name="chordval" value=22>7(#9)</label>
+						<label><input type="checkbox" name="chordval" value=23>m7(11)</label>
+						<label><input type="checkbox" name="chordval" value=24>7(#11)</label>
+						<label><input type="checkbox" name="chordval" value=25>7(13)</label>
+						<label><input type="checkbox" name="chordval" value=26>m7(13)</label>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="obj-right">
+			<div class="figure" id="chord-constellation"></div>
+			<div class="obj-chord">
+				<div id="chordname-txt">
+					<span class="chord-name" id="chordname-1"></span><br>
+					<span class="chord-element" id="chordname-2"></span>
+				</div>
+			</div>
+			<br>
+			<div class="obj-ctrl">
+				<div class="obj-sound">
+					<button class="btn-sound ctrlbtn" id="btn-sound">もう一度聴く</button>
+				</div>
+				<div class="obj-qa">
+					<button class="qa-next ctrlbtn" id="btn-qa"> </button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.26/Tone.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.min.js"></script>
+	<script type="text/javascript" src="chordtrainer.js"></script>
+</body>
+</html>
